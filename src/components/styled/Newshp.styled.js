@@ -246,8 +246,11 @@ export const Overlayscreen = styled.div`
     position:fixed;
     flex-direction: column;
     top:0;
-    left:0;
+    right:0;
     width:100%;
+    animation: overlayslide .3s ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
     height:100vh;
     opacity:.5;
     background:var(--Very-dark-blue);
@@ -259,7 +262,9 @@ export const Menulist = styled(Vstack)`
     right:0;
     width: 70%;
     height: 100vh;
-    transition: .5s ease-in-out;
+    animation: slidernav .5s ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
     background:var(--Off-white);
     @media screen and (max-width:600px) {
         ul{
